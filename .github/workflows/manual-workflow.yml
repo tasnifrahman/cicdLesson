@@ -1,0 +1,13 @@
+name: Manual Work
+on:
+ workflow-dispatch:
+
+jobs:
+ manual-workflow:
+  runs-on: ubuntu-latest
+
+  steps:
+  - name: Manual First Step
+    run: |
+     echo "Manual hello"
+     echo "Manual hello again"
