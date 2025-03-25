@@ -1,6 +1,6 @@
 name: Manual Work
 on:
- workflow-dispatch:
+ workflow_dispatch:
 
 jobs:
  manual-workflow:
