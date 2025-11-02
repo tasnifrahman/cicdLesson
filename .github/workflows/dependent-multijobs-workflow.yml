@@ -1,0 +1,31 @@
+name: Dependent Multi Jobs Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  first-dependent-workflow-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: First Dependent Job
+        run: |
+          echo "From First Dependent Job"
+
+  second-workflow-jobs:
+    runs-on: ubuntu-latest
+    needs: [first-dependent-workflow-job]
+
+    steps:
+      - name: Second Dependent Job
+        run: |
+          echo  "From Second Dependent Job"
+
+  third-workflow-jobs:
+    runs-on: ubuntu-latest
+    needs: [first-dependent-workflow-job, second-dependent-workflow-job]
+
+    steps:
+      - name: Third Dependent Job
+        run: |
+          echo  "From Third Dependent Job"
