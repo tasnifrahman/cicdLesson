@@ -12,7 +12,7 @@ jobs:
         run: |
           echo "From First Dependent Job"
 
-  second-workflow-jobs:
+  second-dependent-workflow-jobs:
     runs-on: ubuntu-latest
     needs: [first-dependent-workflow-job]
 
