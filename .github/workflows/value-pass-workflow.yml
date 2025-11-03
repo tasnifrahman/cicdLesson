@@ -12,7 +12,7 @@ jobs:
   get-value-pass-workflow-job:
     runs-on: ubuntu-latest
     outputs:
-      greetings-message: ${{ steps.generate-message.outputs.message }}
+      greetings_message: ${{ steps.generate-message.outputs.message }}
 
     steps:
       - name: Generate Greetings Message
@@ -27,4 +27,4 @@ jobs:
     steps:
       - name: Print Greetings Message
         run: |
-          echo "${{ needs.get-value-pass-workflow-job.outputs.greetings-message }}"
+          echo "${{ needs.get-value-pass-workflow-job.outputs.greetings_message }}"
