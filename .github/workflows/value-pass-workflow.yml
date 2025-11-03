@@ -18,7 +18,7 @@ jobs:
       - name: Generate Greetings Message
         id: generate-message
         run: |
-          echo "message=Hello, {{ github.event.inputs.name }}!" >> $GITHUB_OUTPUT
+          echo "message=Hello, ${{ github.event.inputs.name }}!" >> $GITHUB_OUTPUT
 
   print-value-pass-workflow-job:
     runs-on: ubuntu-latest
